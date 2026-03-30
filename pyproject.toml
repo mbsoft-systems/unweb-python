@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unweb"
+version = "0.1.0"
+description = "Python SDK for the UnWeb API — convert HTML to Markdown for AI pipelines"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "MBSoft Systems"}]
+keywords = ["html", "markdown", "api", "ai", "llm", "rag", "web-scraping"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = ["httpx>=0.24.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-httpx>=0.30.0"]
+
+[project.urls]
+Homepage = "https://unweb.info"
+Documentation = "https://docs.unweb.info"
+Repository = "https://github.com/mbsoft-systems/unweb-python"
+
+[tool.setuptools.packages.find]
+include = ["unweb*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
